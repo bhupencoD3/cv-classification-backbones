@@ -37,8 +37,13 @@ Each architecture will have **two versions**: one in **PyTorch** and one in **Te
 * **TensorFlow (20 epochs)** → **99.08%** accuracy
 
 📊 Screenshots:
-![LeNet PyTorch Accuracy](screenshots/lenet_pytorch_accuracy.jpg)
-![LeNet TensorFlow Accuracy](screenshots/lenet_tensorflow_accuracy.jpg)
+
+![LeNet PyTorch Accuracy](screenshots/lenet_pytorch_accuracy.jpg)  
+*LeNet – PyTorch (10 epochs, 99.15% accuracy)*  
+
+![LeNet TensorFlow Accuracy](screenshots/lenet_tensorflow_accuracy.jpg)  
+*LeNet – TensorFlow (20 epochs, 99.08% accuracy)*
+
 
 ✅ **PyTorch achieved slightly higher accuracy (99.15% vs 99.08%) with fewer epochs.**
 
