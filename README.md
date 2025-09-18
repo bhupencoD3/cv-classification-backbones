@@ -13,6 +13,10 @@ The goal of this repo is to build a solid understanding of how popular computer 
   * `LeNet5_mnist_torch.ipynb` → LeNet implementation using PyTorch
   * `LeNet5_mnist_tf.ipynb` → LeNet implementation using TensorFlow
 
+* **AlexNet/**
+
+  * `AlexNet_tf.ipynb` → AlexNet implementation using TensorFlow trained on custom Daisy vs Dandelion dataset
+
 ---
 
 ## 📌 Planned Architectures
@@ -20,7 +24,7 @@ The goal of this repo is to build a solid understanding of how popular computer 
 This repo will grow to include implementations of:
 
 * ✅ **LeNet** (PyTorch & TensorFlow)
-* 🔄 **AlexNet** (coming soon)
+* ✅ **AlexNet** (TensorFlow implemented, PyTorch version coming soon)
 * 🔄 **VGGNet**
 * 🔄 **Inception**
 * 🔄 **ResNet**
@@ -38,23 +42,32 @@ Each architecture will have **two versions**: one in **PyTorch** and one in **Te
 
 📊 Screenshots:
 
-![LeNet PyTorch Accuracy](screenshots/lenet_pytorch_accuracy.jpg)  
-*LeNet – PyTorch (10 epochs, 99.15% accuracy)*  
+![LeNet PyTorch Accuracy](screenshots/lenet_pytorch_accuracy.jpg)
+*LeNet – PyTorch (10 epochs, 99.15% accuracy)*
 
-![LeNet TensorFlow Accuracy](screenshots/lenet_tensorflow_accuracy.jpg)  
+![LeNet TensorFlow Accuracy](screenshots/lenet_tensorflow_accuracy.jpg)
 *LeNet – TensorFlow (20 epochs, 99.08% accuracy)*
 
+---
 
-✅ **PyTorch achieved slightly higher accuracy (99.15% vs 99.08%) with fewer epochs.**
+### AlexNet Results (TensorFlow)
+
+* **TensorFlow (20 epochs, Custom Daisy vs Dandelion Dataset)** → **0.8102 accuracy**
+
+📊 Screenshot:
+
+![AlexNet TensorFlow Accuracy](screenshots/alexnet_tensorflow_accuracy.png)
+*AlexNet – TensorFlow trained on Daisy vs Dandelion dataset (20 epochs, 0.8102 accuracy)*
 
 ---
 
 ### Results Table
 
-| Model | Framework  | Epochs | Accuracy   | Best |
-| ----- | ---------- | ------ | ---------- | ---- |
-| LeNet | PyTorch    | 10     | **99.15%** | ✅    |
-| LeNet | TensorFlow | 20     | 99.08%     |      |
+| Model   | Framework  | Dataset                     | Epochs | Accuracy   | Best |
+| ------- | ---------- | --------------------------- | ------ | ---------- | ---- |
+| LeNet   | PyTorch    | MNIST                       | 10     | **99.15%** | ✅    |
+| LeNet   | TensorFlow | MNIST                       | 20     | 99.08%     |      |
+| AlexNet | TensorFlow | Daisy vs Dandelion (Custom) | 20     | 0.8102     |      |
 
 ---
 
