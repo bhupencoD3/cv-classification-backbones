@@ -16,6 +16,7 @@ The goal of this repo is to build a solid understanding of how popular computer 
 * **AlexNet/**
 
   * `AlexNet_tf.ipynb` → AlexNet implementation using TensorFlow trained on custom Daisy vs Dandelion dataset
+  * `AlexNet_torch.ipynb` → AlexNet implementation using PyTorch trained on custom Daisy vs Dandelion dataset
 
 ---
 
@@ -24,7 +25,7 @@ The goal of this repo is to build a solid understanding of how popular computer 
 This repo will grow to include implementations of:
 
 * ✅ **LeNet** (PyTorch & TensorFlow)
-* ✅ **AlexNet** (TensorFlow implemented, PyTorch version coming soon)
+* ✅ **AlexNet** (PyTorch & TensorFlow)
 * 🔄 **VGGNet**
 * 🔄 **Inception**
 * 🔄 **ResNet**
@@ -37,11 +38,10 @@ Each architecture will have **two versions**: one in **PyTorch** and one in **Te
 
 ### LeNet Results
 
-* **PyTorch (10 epochs)** → **99.15%** accuracy
-* **TensorFlow (20 epochs)** → **99.08%** accuracy
+* **PyTorch (10 epochs, MNIST)** → **99.15%** accuracy
+* **TensorFlow (20 epochs, MNIST)** → **99.08%** accuracy
 
 📊 Screenshots:
-
 ![LeNet PyTorch Accuracy](screenshots/lenet_pytorch_accuracy.jpg)
 *LeNet – PyTorch (10 epochs, 99.15% accuracy)*
 
@@ -50,14 +50,17 @@ Each architecture will have **two versions**: one in **PyTorch** and one in **Te
 
 ---
 
-### AlexNet Results (TensorFlow)
+### AlexNet Results
 
-* **TensorFlow (20 epochs, Custom Daisy vs Dandelion Dataset)** → **0.8102 accuracy**
+* **TensorFlow (20 epochs, Daisy vs Dandelion Custom Dataset)** → **0.8102 accuracy**
+* **PyTorch (5 epochs, Daisy vs Dandelion Custom Dataset)** → **82.42% accuracy**
 
-📊 Screenshot:
-
+📊 Screenshots:
 ![AlexNet TensorFlow Accuracy](screenshots/alexnet_tensorflow_accuracy.png)
 *AlexNet – TensorFlow trained on Daisy vs Dandelion dataset (20 epochs, 0.8102 accuracy)*
+
+![AlexNet PyTorch Accuracy](screenshots/alexnet_pytorch_accuracy.png)
+*AlexNet – PyTorch trained on Daisy vs Dandelion dataset (5 epochs, 82.42% accuracy)*
 
 ---
 
@@ -68,6 +71,7 @@ Each architecture will have **two versions**: one in **PyTorch** and one in **Te
 | LeNet   | PyTorch    | MNIST                       | 10     | **99.15%** | ✅    |
 | LeNet   | TensorFlow | MNIST                       | 20     | 99.08%     |      |
 | AlexNet | TensorFlow | Daisy vs Dandelion (Custom) | 20     | 0.8102     |      |
+| AlexNet | PyTorch    | Daisy vs Dandelion (Custom) | 5      | **82.42%** | ✅    |
 
 ---
 
@@ -98,5 +102,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-**bhupen** – *Exploring deep learning one architecture at a time*
+**bhupen** – *Building and benchmarking deep learning backbones for computer vision*
 🔗 [LinkedIn](https://www.linkedin.com/in/bhupenparmar/) | [GitHub](https://github.com/bhupencoD3)
