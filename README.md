@@ -1,6 +1,8 @@
-# CV Classification Backbones
+___
 
-A hands-on learning repository implementing **classic and modern image classification backbones** from scratch in both **PyTorch** and **TensorFlow**. The goal of this repo is to build a solid understanding of how popular computer vision architectures are structured, trained, and compared across frameworks.
+## CV Classification Backbones
+
+ A hands-on learning repository implementing **classic and modern image classification backbones** from scratch in both **PyTorch** and **TensorFlow**. The goal of this repo is to build a solid understanding of how popular computer vision architectures are structured, trained, and compared across frameworks.
 
 ---
 
@@ -19,21 +21,21 @@ A hands-on learning repository implementing **classic and modern image classific
 * **VGG/**
 
   * `vgg_pretrained_tf.ipynb` → Pretrained VGG16 and VGG19 (TensorFlow/Keras) demonstration with ImageNet inference
+  * `vgg_pretrained_torch.ipynb` → Pretrained VGG16 (PyTorch) demonstration with ImageNet inference
 
 ---
 
 ## Planned Architectures
 
-This repo will grow to include implementations of:
+This repo currently focuses on:
 
 * ✅ **LeNet** (PyTorch & TensorFlow)
 * ✅ **AlexNet** (PyTorch & TensorFlow)
-* ✅ **VGG (Pretrained – TensorFlow)**
-* 🔄 **VGG (Custom Training – PyTorch & TensorFlow)**
+* ✅ **VGG (Pretrained – TensorFlow & PyTorch)**
 * 🔄 **Inception**
 * 🔄 **ResNet**
 
-Each architecture will have **two versions**: one in **PyTorch** and one in **TensorFlow** for comparison.
+Each architecture has **two versions**: one in **PyTorch** and one in **TensorFlow** for comparison.
 
 ---
 
@@ -44,16 +46,10 @@ Each architecture will have **two versions**: one in **PyTorch** and one in **Te
 * **PyTorch (10 epochs, MNIST)** → **99.15%** accuracy
 * **TensorFlow (20 epochs, MNIST)** → **99.08%** accuracy
 
-*No screenshots provided for pretrained models (VGG) since no custom training was performed.*
-
----
-
 ### AlexNet Results
 
 * **TensorFlow (20 epochs, Daisy vs Dandelion Custom Dataset)** → **0.8102 accuracy**
 * **PyTorch (5 epochs, Daisy vs Dandelion Custom Dataset)** → **82.42% accuracy**
-
----
 
 ### Results Table
 
@@ -63,6 +59,8 @@ Each architecture will have **two versions**: one in **PyTorch** and one in **Te
 | LeNet   | TensorFlow | MNIST                       | 20     | 99.08%     |      |
 | AlexNet | TensorFlow | Daisy vs Dandelion (Custom) | 20     | 0.8102     |      |
 | AlexNet | PyTorch    | Daisy vs Dandelion (Custom) | 5      | **82.42%** | ✅    |
+| VGG16   | TensorFlow | Pretrained ImageNet         | N/A    | Inference  | ✅    |
+| VGG16   | PyTorch    | Pretrained ImageNet         | N/A    | Inference  | ✅    |
 
 ---
 
@@ -71,8 +69,10 @@ Each architecture will have **two versions**: one in **PyTorch** and one in **Te
 * **Python 3**
 * **PyTorch**
 * **TensorFlow / Keras**
+* **Torchvision**
 * **NumPy**
 * **Matplotlib**
+* **PIL (Pillow)**
 
 ---
 
@@ -82,6 +82,26 @@ Each architecture will have **two versions**: one in **PyTorch** and one in **Te
 * To compare implementations across frameworks (PyTorch vs TensorFlow).
 * To understand design choices behind classic and modern CNNs.
 * To create a reference repo for interview prep and future projects.
+
+---
+
+## Usage Example (PyTorch VGG16)
+
+```python
+from vgg_pretrained_torch import infer, show_image
+
+image_path = 'elephant.jpg'
+show_image(image_path)
+results = infer(image_path)
+for label, prob in results:
+    print(f'{label} {prob:.4f}')
+```
+
+This notebook demonstrates how to:
+
+* Load a **pretrained VGG16 model** in PyTorch.
+* Preprocess images and perform inference.
+* Display the top-5 predictions for any input image.
 
 ---
 
