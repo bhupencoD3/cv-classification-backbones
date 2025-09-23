@@ -1,8 +1,6 @@
-___
-
 ## CV Classification Backbones
 
- A hands-on learning repository implementing **classic and modern image classification backbones** from scratch in both **PyTorch** and **TensorFlow**. The goal of this repo is to build a solid understanding of how popular computer vision architectures are structured, trained, and compared across frameworks.
+A hands-on learning repository implementing **classic and modern image classification backbones** from scratch in both **PyTorch** and **TensorFlow**. The goal of this repo is to build a solid understanding of how popular computer vision architectures are structured, trained, and compared across frameworks.
 
 ---
 
@@ -23,6 +21,10 @@ ___
   * `vgg_pretrained_tf.ipynb` → Pretrained VGG16 and VGG19 (TensorFlow/Keras) demonstration with ImageNet inference
   * `vgg_pretrained_torch.ipynb` → Pretrained VGG16 (PyTorch) demonstration with ImageNet inference
 
+* **Inception/**
+
+  * `inception_tf.ipynb` → InceptionV3 implementation using TensorFlow/Keras pretrained on ImageNet and sample inference
+
 ---
 
 ## Planned Architectures
@@ -32,10 +34,10 @@ This repo currently focuses on:
 * ✅ **LeNet** (PyTorch & TensorFlow)
 * ✅ **AlexNet** (PyTorch & TensorFlow)
 * ✅ **VGG (Pretrained – TensorFlow & PyTorch)**
-* 🔄 **Inception**
+* ✅ **Inception (TensorFlow)**
 * 🔄 **ResNet**
 
-Each architecture has **two versions**: one in **PyTorch** and one in **TensorFlow** for comparison.
+Each architecture has **two versions**: one in **PyTorch** and one in **TensorFlow** for comparison where applicable.
 
 ---
 
@@ -51,16 +53,21 @@ Each architecture has **two versions**: one in **PyTorch** and one in **TensorFl
 * **TensorFlow (20 epochs, Daisy vs Dandelion Custom Dataset)** → **0.8102 accuracy**
 * **PyTorch (5 epochs, Daisy vs Dandelion Custom Dataset)** → **82.42% accuracy**
 
+### Inception Results
+
+* **TensorFlow (Pretrained ImageNet)** → Top-5 predictions demonstrated for sample images (`squirrel.jpg`, `starfish.jpg`, `indian-bustard.jpg`)
+
 ### Results Table
 
-| Model   | Framework  | Dataset                     | Epochs | Accuracy   | Best |
-| ------- | ---------- | --------------------------- | ------ | ---------- | ---- |
-| LeNet   | PyTorch    | MNIST                       | 10     | **99.15%** | ✅    |
-| LeNet   | TensorFlow | MNIST                       | 20     | 99.08%     |      |
-| AlexNet | TensorFlow | Daisy vs Dandelion (Custom) | 20     | 0.8102     |      |
-| AlexNet | PyTorch    | Daisy vs Dandelion (Custom) | 5      | **82.42%** | ✅    |
-| VGG16   | TensorFlow | Pretrained ImageNet         | N/A    | Inference  | ✅    |
-| VGG16   | PyTorch    | Pretrained ImageNet         | N/A    | Inference  | ✅    |
+| Model     | Framework  | Dataset                     | Epochs | Accuracy / Notes | Best |
+| --------- | ---------- | --------------------------- | ------ | ---------------- | ---- |
+| LeNet     | PyTorch    | MNIST                       | 10     | **99.15%**       | ✅    |
+| LeNet     | TensorFlow | MNIST                       | 20     | 99.08%           |      |
+| AlexNet   | TensorFlow | Daisy vs Dandelion (Custom) | 20     | 0.8102           |      |
+| AlexNet   | PyTorch    | Daisy vs Dandelion (Custom) | 5      | **82.42%**       | ✅    |
+| VGG16     | TensorFlow | Pretrained ImageNet         | N/A    | Inference        | ✅    |
+| VGG16     | PyTorch    | Pretrained ImageNet         | N/A    | Inference        | ✅    |
+| Inception | TensorFlow | Pretrained ImageNet         | N/A    | Sample inference | ✅    |
 
 ---
 
