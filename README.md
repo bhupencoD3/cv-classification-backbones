@@ -1,10 +1,11 @@
-## CV Classification Backbones
+# 🖼️ CV Classification Backbones
 
-A hands-on learning repository implementing **classic and modern image classification backbones** from scratch in both **PyTorch** and **TensorFlow**. The goal of this repo is to build a solid understanding of how popular computer vision architectures are structured, trained, and compared across frameworks.
+A hands-on learning repository implementing **classic and modern image classification backbones** from scratch in both **PyTorch** and **TensorFlow**.
+The goal of this repo is to build a solid understanding of how popular computer vision architectures are structured, trained, and compared across frameworks.
 
 ---
 
-## Repository Contents
+## 📂 Current Contents
 
 * **LeNet/**
 
@@ -18,44 +19,68 @@ A hands-on learning repository implementing **classic and modern image classific
 
 * **VGG/**
 
-  * `vgg_pretrained_tf.ipynb` → Pretrained VGG16 and VGG19 (TensorFlow/Keras) demonstration with ImageNet inference
-  * `vgg_pretrained_torch.ipynb` → Pretrained VGG16 (PyTorch) demonstration with ImageNet inference
+  * `vgg_pretrained_tf.ipynb` → Pretrained VGG16 & VGG19 (TensorFlow/Keras) with ImageNet inference
+  * `vgg_pretrained_torch.ipynb` → Pretrained VGG16 (PyTorch) with ImageNet inference
 
 * **Inception/**
 
-  * `inception_tf.ipynb` → InceptionV3 implementation using TensorFlow/Keras pretrained on ImageNet and sample inference
+  * `inception_tf.ipynb` → InceptionV3 implementation using TensorFlow/Keras pretrained on ImageNet
+  * `inception_torch.ipynb` → InceptionV3 implementation using PyTorch pretrained on ImageNet with top-5 inference visualization
 
 ---
 
-## Planned Architectures
+## 📌 Planned Architectures
 
-This repo currently focuses on:
+This repo currently includes:
 
 * ✅ **LeNet** (PyTorch & TensorFlow)
 * ✅ **AlexNet** (PyTorch & TensorFlow)
 * ✅ **VGG (Pretrained – TensorFlow & PyTorch)**
-* ✅ **Inception (TensorFlow)**
-* 🔄 **ResNet**
+* ✅ **Inception (TensorFlow & PyTorch)**
+* 🔄 **ResNet** (coming soon)
 
-Each architecture has **two versions**: one in **PyTorch** and one in **TensorFlow** for comparison where applicable.
+Each architecture has **two versions**: PyTorch and TensorFlow where applicable.
 
 ---
 
-## Results
+## 🧪 Results
 
 ### LeNet Results
 
 * **PyTorch (10 epochs, MNIST)** → **99.15%** accuracy
 * **TensorFlow (20 epochs, MNIST)** → **99.08%** accuracy
 
+📊 Screenshots:
+![LeNet PyTorch Accuracy](screenshots/lenet_pytorch_accuracy.jpg)
+*LeNet – PyTorch (10 epochs, 99.15% accuracy)*
+
+![LeNet TensorFlow Accuracy](screenshots/lenet_tensorflow_accuracy.jpg)
+*LeNet – TensorFlow (20 epochs, 99.08% accuracy)*
+
+---
+
 ### AlexNet Results
 
 * **TensorFlow (20 epochs, Daisy vs Dandelion Custom Dataset)** → **0.8102 accuracy**
 * **PyTorch (5 epochs, Daisy vs Dandelion Custom Dataset)** → **82.42% accuracy**
 
+📊 Screenshots:
+![AlexNet TensorFlow Accuracy](screenshots/alexnet_tensorflow_accuracy.png)
+*AlexNet – TensorFlow (20 epochs, 0.8102 accuracy)*
+
+![AlexNet PyTorch Accuracy](screenshots/alexnet_pytorch_accuracy.png)
+*AlexNet – PyTorch (5 epochs, 82.42% accuracy)*
+
+---
+
 ### Inception Results
 
-* **TensorFlow (Pretrained ImageNet)** → Top-5 predictions demonstrated for sample images (`squirrel.jpg`, `starfish.jpg`, `indian-bustard.jpg`)
+* **TensorFlow (Pretrained ImageNet)** → Top-5 predictions demonstrated for sample images
+* **PyTorch (Pretrained ImageNet)** → Top-5 predictions demonstrated for sample images
+
+> ⚠️ Screenshots for Inception results will be added soon.
+
+---
 
 ### Results Table
 
@@ -68,10 +93,11 @@ Each architecture has **two versions**: one in **PyTorch** and one in **TensorFl
 | VGG16     | TensorFlow | Pretrained ImageNet         | N/A    | Inference        | ✅    |
 | VGG16     | PyTorch    | Pretrained ImageNet         | N/A    | Inference        | ✅    |
 | Inception | TensorFlow | Pretrained ImageNet         | N/A    | Sample inference | ✅    |
+| Inception | PyTorch    | Pretrained ImageNet         | N/A    | Sample inference | ✅    |
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 * **Python 3**
 * **PyTorch**
@@ -83,42 +109,22 @@ Each architecture has **two versions**: one in **PyTorch** and one in **TensorFl
 
 ---
 
-## Purpose
+## 🎯 Purpose
 
-* To learn how classification backbones are built from scratch.
-* To compare implementations across frameworks (PyTorch vs TensorFlow).
-* To understand design choices behind classic and modern CNNs.
-* To create a reference repo for interview prep and future projects.
-
----
-
-## Usage Example (PyTorch VGG16)
-
-```python
-from vgg_pretrained_torch import infer, show_image
-
-image_path = 'elephant.jpg'
-show_image(image_path)
-results = infer(image_path)
-for label, prob in results:
-    print(f'{label} {prob:.4f}')
-```
-
-This notebook demonstrates how to:
-
-* Load a **pretrained VGG16 model** in PyTorch.
-* Preprocess images and perform inference.
-* Display the top-5 predictions for any input image.
+* 📚 Learn how classification backbones are built from scratch.
+* ⚡ Compare implementations across frameworks (PyTorch vs TensorFlow).
+* 🧠 Understand design choices behind classic and modern CNNs.
+* 🚀 Create a reference repo for **interview prep** and future projects.
 
 ---
 
-## License
+## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## Author
+## 👤 Author
 
-**bhupen** – Building and benchmarking deep learning backbones for computer vision
-[LinkedIn](https://www.linkedin.com/in/bhupenparmar/) | [GitHub](https://github.com/bhupencoD3)
+**bhupen** – *Building and benchmarking deep learning backbones for computer vision*
+🔗 [LinkedIn](https://www.linkedin.com/in/bhupenparmar/) | [GitHub](https://github.com/bhupencoD3)
