@@ -26,6 +26,7 @@ The goal of this repo is to build a solid understanding of how popular computer 
 
   * `inception_tf.ipynb` → InceptionV3 implementation using TensorFlow/Keras pretrained on ImageNet
   * `inception_torch.ipynb` → InceptionV3 implementation using PyTorch pretrained on ImageNet with top-5 inference visualization
+  * `inception_transfer_learning.ipynb` → InceptionV3 transfer learning on CIFAR-10 with validation accuracy visualization
 
 ---
 
@@ -62,7 +63,7 @@ Each architecture has **two versions**: PyTorch and TensorFlow where applicable.
 ### AlexNet Results
 
 * **TensorFlow (20 epochs, Daisy vs Dandelion Custom Dataset)** → **0.8102 accuracy**
-* **PyTorch (5 epochs, Daisy vs Dandelion Custom Dataset)** → **82.42% accuracy**
+* **PyTorch (5 epochs, Daisy vs Dandelion Custom Dataset)** → **82.42% accuracy*
 
 📊 Screenshots:
 ![AlexNet TensorFlow Accuracy](screenshots/alexnet_tensorflow_accuracy.png)
@@ -77,23 +78,29 @@ Each architecture has **two versions**: PyTorch and TensorFlow where applicable.
 
 * **TensorFlow (Pretrained ImageNet)** → Top-5 predictions demonstrated for sample images
 * **PyTorch (Pretrained ImageNet)** → Top-5 predictions demonstrated for sample images
+* **Transfer Learning (CIFAR-10)** → Validation accuracy ~0.7392 over 10 epochs
 
-> ⚠️ Screenshots for Inception results will be added soon.
+📊 Screenshots:
+![Inception TensorFlow Accuracy](screenshots/inception_tensorflow_accuracy.png)
+*Inception Transfer Learning – TensorFlow CIFAR-10 validation accuracy*
+
+> ⚠️ Screenshots for Inception PyTorch and other results will be added soon.
 
 ---
 
 ### Results Table
 
-| Model     | Framework  | Dataset                     | Epochs | Accuracy / Notes | Best |
-| --------- | ---------- | --------------------------- | ------ | ---------------- | ---- |
-| LeNet     | PyTorch    | MNIST                       | 10     | **99.15%**       | ✅    |
-| LeNet     | TensorFlow | MNIST                       | 20     | 99.08%           |      |
-| AlexNet   | TensorFlow | Daisy vs Dandelion (Custom) | 20     | 0.8102           |      |
-| AlexNet   | PyTorch    | Daisy vs Dandelion (Custom) | 5      | **82.42%**       | ✅    |
-| VGG16     | TensorFlow | Pretrained ImageNet         | N/A    | Inference        | ✅    |
-| VGG16     | PyTorch    | Pretrained ImageNet         | N/A    | Inference        | ✅    |
-| Inception | TensorFlow | Pretrained ImageNet         | N/A    | Sample inference | ✅    |
-| Inception | PyTorch    | Pretrained ImageNet         | N/A    | Sample inference | ✅    |
+| Model     | Framework  | Dataset                      | Epochs | Accuracy / Notes | Best |
+| --------- | ---------- | ---------------------------- | ------ | ---------------- | ---- |
+| LeNet     | PyTorch    | MNIST                        | 10     | **99.15%**       | ✅    |
+| LeNet     | TensorFlow | MNIST                        | 20     | 99.08%           |      |
+| AlexNet   | TensorFlow | Daisy vs Dandelion (Custom)  | 20     | 0.8102           |      |
+| AlexNet   | PyTorch    | Daisy vs Dandelion (Custom)  | 5      | **82.42%**       | ✅    |
+| VGG16     | TensorFlow | Pretrained ImageNet          | N/A    | Inference        | ✅    |
+| VGG16     | PyTorch    | Pretrained ImageNet          | N/A    | Inference        | ✅    |
+| Inception | TensorFlow | Pretrained ImageNet          | N/A    | Sample inference | ✅    |
+| Inception | PyTorch    | Pretrained ImageNet          | N/A    | Sample inference | ✅    |
+| Inception | TensorFlow | CIFAR-10 (Transfer Learning) | 10     | 0.7392 val_acc   |      |
 
 ---
 
@@ -111,10 +118,10 @@ Each architecture has **two versions**: PyTorch and TensorFlow where applicable.
 
 ## 🎯 Purpose
 
-* 📚 Learn how classification backbones are built from scratch.
-* ⚡ Compare implementations across frameworks (PyTorch vs TensorFlow).
-* 🧠 Understand design choices behind classic and modern CNNs.
-* 🚀 Create a reference repo for **interview prep** and future projects.
+* 📚 Learn how classification backbones are built from scratch
+* ⚡ Compare implementations across frameworks (PyTorch vs TensorFlow)
+* 🧠 Understand design choices behind classic and modern CNNs
+* 🚀 Create a reference repo for **interview prep** and future projects
 
 ---
 
