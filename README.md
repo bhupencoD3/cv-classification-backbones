@@ -28,6 +28,10 @@ The goal of this repo is to build a solid understanding of how popular computer 
   * `inception_torch.ipynb` → InceptionV3 implementation using PyTorch pretrained on ImageNet with top-5 inference visualization
   * `inception_transfer_learning.ipynb` → InceptionV3 transfer learning on CIFAR-10 with validation accuracy visualization
 
+* **ResNet/**
+
+  * `resnet50_tf.ipynb` → ResNet50 pretrained on ImageNet using TensorFlow/Keras with top-5 inference
+
 ---
 
 ## 📌 Planned Architectures
@@ -38,7 +42,7 @@ This repo currently includes:
 * ✅ **AlexNet** (PyTorch & TensorFlow)
 * ✅ **VGG (Pretrained – TensorFlow & PyTorch)**
 * ✅ **Inception (TensorFlow & PyTorch)**
-* 🔄 **ResNet** (coming soon)
+* ✅ **ResNet (TensorFlow)**
 
 Each architecture has **two versions**: PyTorch and TensorFlow where applicable.
 
@@ -88,6 +92,16 @@ Each architecture has **two versions**: PyTorch and TensorFlow where applicable.
 
 ---
 
+### ResNet Results
+
+* **TensorFlow (Pretrained ImageNet)** → Top-5 predictions demonstrated for sample images
+
+📊 Screenshots:
+
+> ⚠️ Screenshots for ResNet results will be added soon.
+
+---
+
 ### Results Table
 
 | Model     | Framework  | Dataset                      | Epochs | Accuracy / Notes | Best |
@@ -101,6 +115,7 @@ Each architecture has **two versions**: PyTorch and TensorFlow where applicable.
 | Inception | TensorFlow | Pretrained ImageNet          | N/A    | Sample inference | ✅    |
 | Inception | PyTorch    | Pretrained ImageNet          | N/A    | Sample inference | ✅    |
 | Inception | TensorFlow | CIFAR-10 (Transfer Learning) | 10     | 0.7392 val_acc   |      |
+| ResNet50  | TensorFlow | Pretrained ImageNet          | N/A    | Sample inference | ✅    |
 
 ---
 
