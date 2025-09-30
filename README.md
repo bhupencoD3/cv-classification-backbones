@@ -30,7 +30,8 @@ The goal of this repo is to build a solid understanding of how popular computer 
 
 * **ResNet/**
 
-  * `resnet50_tf.ipynb` → ResNet50 pretrained on ImageNet using TensorFlow/Keras with top-5 inference
+  * `resnet50_tf.ipynb` → ResNet50 implementation using TensorFlow/Keras pretrained on ImageNet
+  * `resnet50_torch.ipynb` → ResNet50 implementation using PyTorch pretrained on ImageNet with top-5 prediction visualization
 
 ---
 
@@ -40,9 +41,9 @@ This repo currently includes:
 
 * ✅ **LeNet** (PyTorch & TensorFlow)
 * ✅ **AlexNet** (PyTorch & TensorFlow)
-* ✅ **VGG (Pretrained – TensorFlow & PyTorch)**
-* ✅ **Inception (TensorFlow & PyTorch)**
-* ✅ **ResNet (TensorFlow)**
+* ✅ **VGG** (Pretrained – TensorFlow & PyTorch)
+* ✅ **Inception** (TensorFlow & PyTorch)
+* ✅ **ResNet50** (TensorFlow & PyTorch)
 
 Each architecture has **two versions**: PyTorch and TensorFlow where applicable.
 
@@ -67,7 +68,7 @@ Each architecture has **two versions**: PyTorch and TensorFlow where applicable.
 ### AlexNet Results
 
 * **TensorFlow (20 epochs, Daisy vs Dandelion Custom Dataset)** → **0.8102 accuracy**
-* **PyTorch (5 epochs, Daisy vs Dandelion Custom Dataset)** → **82.42% accuracy*
+* **PyTorch (5 epochs, Daisy vs Dandelion Custom Dataset)** → **82.42% accuracy**
 
 📊 Screenshots:
 ![AlexNet TensorFlow Accuracy](screenshots/alexnet_tensorflow_accuracy.png)
@@ -94,9 +95,8 @@ Each architecture has **two versions**: PyTorch and TensorFlow where applicable.
 
 ### ResNet Results
 
-* **TensorFlow (Pretrained ImageNet)** → Top-5 predictions demonstrated for sample images
-
-📊 Screenshots:
+* **TensorFlow (Pretrained ImageNet)** → Top-5 predictions demonstrated for sample images (e.g. *bustard: 99.99%*)
+* **PyTorch (Pretrained ImageNet)** → Top-5 predictions demonstrated for sample images
 
 > ⚠️ Screenshots for ResNet results will be added soon.
 
@@ -116,6 +116,7 @@ Each architecture has **two versions**: PyTorch and TensorFlow where applicable.
 | Inception | PyTorch    | Pretrained ImageNet          | N/A    | Sample inference | ✅    |
 | Inception | TensorFlow | CIFAR-10 (Transfer Learning) | 10     | 0.7392 val_acc   |      |
 | ResNet50  | TensorFlow | Pretrained ImageNet          | N/A    | Sample inference | ✅    |
+| ResNet50  | PyTorch    | Pretrained ImageNet          | N/A    | Sample inference | ✅    |
 
 ---
 
